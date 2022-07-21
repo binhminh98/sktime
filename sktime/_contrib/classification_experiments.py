@@ -19,6 +19,7 @@ from sktime._contrib.set_classifier import set_classifier
 from sktime.benchmarking.experiments import load_and_run_classification_experiment
 from sktime.classification.deep_learning import CNNClassifier
 from sktime.classification.feature_based import FreshPRINCE
+from sktime.classification.hybrid import HIVECOTEV2
 from sktime.classification.interval_based import CanonicalIntervalForest
 from sktime.datasets import load_from_tsfile_to_dataframe as load_ts
 
@@ -100,11 +101,11 @@ if __name__ == "__main__":
         )
     else:  # Local run
         print(" Local Run")
-        data_dir = "../datasets/data/"
+        data_dir = "D:/UEA/Dissertation/HPC and Linux/Datasets/Multivariate2018_ts/Multivariate_ts/"
         results_dir = "./temp/"
         cls_name = "FreshPRINCE"
         classifier = FreshPRINCE()
-        dataset = "UnitTest"
+        dataset = "BasicMotions"
         resample = 0
         tf = False
         predefined_resample = False
